@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <p>Refresh Page to Play again!</p>
+    <script>
+    
+        function computerPlay(){
+            let number = Math.floor(Math.random() * Math.floor(3))
+            if (number == 0){
+                return "Rock"
+            } else if( number == 1){
+                return "Scissors"
+            } else if (number == 2){
+                return "Paper"
+            }
+        }
+        
+        
+        function playRound(playerSelection, computerSelection){
+            if ((computerSelection == "rock") && (playerSelection == "rock")) {
+                
+                alert ("its a tie, Rock and Rock.");
+            }
+            else if ((computerSelection == "Scissors") && (playerSelection == "rock")){
+                alert ("you win, Rock crushes Scissors!")
+            }
+            else if ((computerSelection == "Paper") && (playerSelection == "rock")){
+                alert ("you lose, Paper covers Rock!")
+            }
+            else if ((computerSelection == "Paper") && (playerSelection == "paper")){
+                alert ("you tied, Paper and Paper. ")
+                }
+            else if ((computerSelection == "Scissors") && (playerSelection == "paper")){
+                alert ("you lose, Scissors cut Paper!")
+            }
+            else if ((computerSelection == "Scissors") && (playerSelection == "rock")){
+                alert ("you win, Rock crushes Scissors!")
+            }
+            else if ((computerSelection == "Scissors") && (playerSelection == "Scissors")){ 
+                alert ("its a tie! Scissors and Scissors.")
+            }
+           
+
+com
+        }
+            //* change players Selection below (rock, paper, or scissors)//
+        const playerSelection = "paper"
+        const computerSelection = computerPlay()
+        console.log(playRound(playerSelection, computerSelection))
+        
+    
+        
+    </script>
+    </body>
+</html>
